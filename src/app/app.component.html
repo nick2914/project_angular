@@ -1,0 +1,58 @@
+<div class="container">
+    <header>
+        <div class="nav-container">
+            <div class="left">
+                Information
+            </div>
+            <div class="right">
+                <button mat-button>Search</button>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <div class="logo">
+            <img src="https://1.bp.blogspot.com/-LkMZ_dHAMJk/WH3tB4DGhvI/AAAAAAACnOc/6ftVkJg554Mmhnx1XGyWtyGzGnfxBAeUwCLcB/s1600/juventusescudo17187000.jpg"
+                alt="">
+        </div>
+
+        <div class="section">
+            <mat-list>
+                <mat-list-item>
+                    <a [routerLink]="'/architect'" mat-button>ARCHITECT</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <a [routerLink]="'/module'" mat-button>MODULE</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <a [routerLink]="'/component'" mat-button>COMPONENT</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <a [routerLink]="'/binding'" mat-button>BINDING</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <a [routerLink]="'/styling'" mat-button>STYLING</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <a [routerLink]="'/routing'" mat-button>ROUTING</a>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
+        </div>
+        <div class="signup">
+            <button mat-raised-button>Sign up</button>
+        </div>
+    </aside>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+    <footer>
+        <div class="social">Social</div>
+        <div class="rule">Rule</div>
+        <div class="register">Email register</div>
+    </footer>
+</div>
