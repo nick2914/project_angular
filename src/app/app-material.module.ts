@@ -2,6 +2,7 @@
 
 import { NgModule } from "@angular/core";
 import {
+    MatProgressBarModule,
     MatButtonModule, 
     MatCheckboxModule,
     MatToolbarModule,
@@ -25,6 +26,7 @@ import {
     MatAutocompleteModule,
     MatSlideToggleModule,
     MatTableModule,
+    MatTooltipModule
 } from '@angular/material';
 
 @NgModule({
@@ -51,9 +53,13 @@ import {
         MatListModule,
         MatChipsModule,
         MatDialogModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatTooltipModule,
+        MatProgressBarModule
     ],
     exports: [
+        MatTooltipModule,
+        MatProgressBarModule,
         MatTableModule,
         MatSlideToggleModule,
         MatButtonModule, 

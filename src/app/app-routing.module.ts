@@ -7,6 +7,7 @@ import { BindingComponent } from './sections/binding/binding.component';
 import { StylingComponent } from './sections/styling/styling.component';
 import { RoutingComponent } from './sections/routing/routing.component';
 import { PagenotfoundComponent } from './sections/pagenotfound/pagenotfound.component';
+import { LessonDetailComponent } from './reusable component/lesson-detail/lesson-detail.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'binding', component: BindingComponent},
   {path: 'styling', component: StylingComponent},
   {path: 'routing', component: RoutingComponent},
+  {path: 'detail/:id', component: LessonDetailComponent},
   {path: '**', component: PagenotfoundComponent}
 ];
 

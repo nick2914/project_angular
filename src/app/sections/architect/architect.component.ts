@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonsServices } from 'src/app/service/data_services/lessons.service';
 import { Lesson } from 'src/app/model/lesson.model';
+import { DisplayService } from 'src/app/service/display.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-architect',
@@ -8,34 +10,18 @@ import { Lesson } from 'src/app/model/lesson.model';
   styleUrls: ['./architect.component.scss']
 })
 export class ArchitectComponent implements OnInit {
-  lessons;
+  url: string;
   now: any;
 
-  constructor(private _lessonsService: LessonsServices) { }
+  constructor(
+    private _lessonsService: LessonsServices,
+    private _displayService: DisplayService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
-    this.now = this.handleNow();
-    this.showLessons();
+    this.url = this.router.url.substr(1);
+    this.now = this._displayService.handleNow();
   }
 
-  showLessons() {
-    this.lessons = this._lessonsService.getLessons();
-  }
-
-  handleNow(): any {
-    var today: any = new Date();
-    var dd: any = today.getDate();
-
-    var mm: any = today.getMonth() + 1;
-    var yyyy = today.getFullYear();
-    if (dd < 10) {
-      dd = '0' + dd;
-    }
-
-    if (mm < 10) {
-      mm = '0' + mm;
-    }
-    today = mm+'-'+dd+'-'+yyyy;
-    return today;
-  }
 }

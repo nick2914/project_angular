@@ -15,6 +15,8 @@ import { RoutingComponent } from './sections/routing/routing.component';
 import { StylingComponent } from './sections/styling/styling.component';
 import { BindingComponent } from './sections/binding/binding.component';
 import { PagenotfoundComponent } from './sections/pagenotfound/pagenotfound.component';
+import { LessonsComponent } from './reusable component/lessons/lessons.component';
+import { LessonDetailComponent } from './reusable component/lesson-detail/lesson-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { PagenotfoundComponent } from './sections/pagenotfound/pagenotfound.comp
     StylingComponent,
     BindingComponent,
     PagenotfoundComponent,
+    LessonsComponent,
+    LessonDetailComponent,
   ],
   imports: [
     BrowserModule,

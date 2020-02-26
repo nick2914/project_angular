@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LessonsServices } from 'src/app/service/data_services/lessons.service';
 import { DisplayService } from 'src/app/service/display.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Lesson } from 'src/app/model/lesson.model';
 
+
 @Component({
-  selector: 'app-component',
-  templateUrl: './component.component.html',
-  styleUrls: ['./component.component.scss']
+  selector: 'app-lessons',
+  templateUrl: './lessons.component.html',
+  styleUrls: ['./lessons.component.scss'],
 })
-export class ComponentComponent implements OnInit {
-  url: string;
+export class LessonsComponent implements OnInit {
+  @Input() url: string;
+  lessons;
   now: any;
 
   constructor(
@@ -20,9 +22,17 @@ export class ComponentComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.url = this.router.url.substr(1);
     this.now = this._displayService.handleNow();
+    this.showLessons(this.url);
   }
 
+  showLessons(url: string) {
+    this._lessonsService.getLessons().subscribe((data: Lesson[]) => {
+      this.lessons = data.filter(x => x.section == url)
+    });
+  }
 
+  goToDetail(id: number) {
+    this.router.navigate(['/detail', id]);
+  }
 }

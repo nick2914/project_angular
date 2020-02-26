@@ -4,8 +4,8 @@
             <div class="left">
                 <form class="example-form">
                     <mat-form-field class="example-full-width">
-                        <mat-label>Favorite food</mat-label>
-                        <input matInput placeholder="Ex. Pizza" value="Sushi">
+                        <mat-label>Search</mat-label>
+                        <input matInput placeholder="Typing keywork" value="">
                     </mat-form-field>
                 </form>
             </div>
@@ -49,11 +49,11 @@
             </mat-list>
         </div>
         <div class="signup">
-            <button mat-raised-button>Sign up</button>
+            <button mat-raised-button matTooltip="Đăng ký thành viên để cập nhật posts mới nhất">Đăng ký</button>
         </div>
     </aside>
-    <main>
-        <router-outlet></router-outlet>
+    <main >
+        <router-outlet #outlet="outlet"></router-outlet>
     </main>
     <footer>
         <div class="social">Social</div>
