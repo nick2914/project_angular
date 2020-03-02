@@ -3,6 +3,7 @@
 import { NgModule } from "@angular/core";
 import {
     MatProgressBarModule,
+    MatPaginatorModule,
     MatButtonModule, 
     MatCheckboxModule,
     MatToolbarModule,
@@ -26,11 +27,14 @@ import {
     MatAutocompleteModule,
     MatSlideToggleModule,
     MatTableModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule
 } from '@angular/material';
 
 @NgModule({
     imports: [
+        MatProgressSpinnerModule,
+        MatPaginatorModule,
         MatTableModule,
         MatAutocompleteModule,
         MatButtonModule, 
@@ -82,7 +86,9 @@ import {
         MatDividerModule,
         MatListModule,
         MatChipsModule,
-        MatDialogModule
+        MatDialogModule,
+        MatProgressSpinnerModule,
+        MatPaginatorModule
     ]
 })
 export class MaterialModule{

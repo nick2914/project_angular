@@ -1,1 +1,34 @@
-<p>lesson-detail works!</p>
+<div *ngIf="(lesson_detail$ | async) as lesson" class="container">
+    <div class="image">
+        <img [src]="lesson.image" alt="">
+    </div>
+    <div class="content">
+        <h1>
+            {{lesson.title}}
+        </h1>
+        <span class="small_info">
+            <small>Ngày đăng: </small>
+            {{lesson.created_time}}
+        </span>
+        <span class="small_info">
+            <small>Lượt view: </small>
+            {{lesson.viewed}}
+        </span>
+        <mat-divider></mat-divider>
+        <br>
+        <p class="lesson_number">{{lesson.content}}</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eum repellat aperiam maiores maxime optio nulla vitae dolore sequi odit suscipit ut, assumenda corrupti saepe nemo ipsum magnam minima velit a atque recusandae dolores nesciunt? Earum repellat nulla, hic culpa incidunt cupiditate provident dolorem enim sint. Dolore repellendus vel illo autem aliquid deleniti, iste accusamus. Magnam corporis nulla impedit odit dolorum veniam reprehenderit iure asperiores officiis, recusandae necessitatibus omnis sunt! Odio pariatur officia dolor id at perspiciatis officiis, velit placeat excepturi a autem veritatis obcaecati nemo facilis impedit assumenda. Iure iste tempore quis veritatis repudiandae excepturi necessitatibus corrupti repellat enim odit officiis eligendi impedit quia porro accusantium provident suscipit sit, eos aut corporis doloremque delectus. Iure dolorem sapiente in est dicta inventore? Harum eos omnis placeat maxime enim optio velit dolorem laudantium odit, similique dolore hic eveniet facere officiis quam ad? Delectus quibusdam, sint itaque dolorem animi beatae cumque officia quod rerum explicabo quasi labore eos fugiat cupiditate, distinctio, consectetur enim ab perspiciatis ea incidunt iusto asperiores eius impedit sequi? Ducimus sapiente autem natus id nihil optio unde, velit ratione mollitia! At minima deleniti, eius amet provident consequuntur suscipit nulla rerum, magnam nemo error aut deserunt cum ad hic blanditiis voluptatum aliquid! Natus impedit ipsa provident labore, praesentium, neque modi id excepturi, eius culpa consequuntur autem reprehenderit ad eum? Dicta est cum numquam sed nisi libero voluptatum quidem totam, exercitationem architecto quaerat ut. Veritatis quia vel temporibus omnis dolorem, ad sed quos velit? Magnam eaque culpa quaerat at unde nam dicta doloribus? Repudiandae inventore libero velit, nobis quaerat beatae, blanditiis voluptatum error ullam reprehenderit enim dolorem voluptate, repellendus quas aperiam porro molestiae molestias nisi esse facilis corrupti dolor architecto adipisci! Consequuntur tempore, cupiditate aspernatur, quibusdam optio, numquam magnam vel voluptate beatae dolor id aut. Quia debitis aperiam animi nam blanditiis quae dignissimos? Optio, nulla fuga. Iusto, magnam. Explicabo alias aliquid quisquam eum, impedit rem dignissimos rerum iusto magnam! Magnam nemo sequi ut, id, iusto repellendus atque necessitatibus vel non in dicta ratione voluptate quas iure numquam illo quae. Architecto cupiditate, dolore soluta velit pariatur, officia dicta repudiandae fugiat ratione quia ducimus voluptatum enim vero rem officiis esse sit aliquid dolorem nulla voluptate similique repellendus illum et. Fugiat corrupti nobis explicabo laborum accusamus id praesentium repellendus assumenda voluptate magnam at eveniet rem esse in facere velit incidunt quos necessitatibus, reiciendis voluptatum voluptatibus ullam itaque. Officiis, quos voluptate velit natus, id nesciunt culpa consectetur, nihil iste sunt pariatur assumenda. Praesentium eius hic ut, natus aliquid necessitatibus voluptatibus iure veniam optio quae maxime fugiat vitae incidunt. Aliquid aspernatur corporis et! Eos, nobis. Eum eius veniam dolores aliquam, excepturi iure alias laboriosam rerum aut quis consequatur consectetur perspiciatis quod aperiam omnis nobis doloremque saepe optio voluptates quasi debitis. Non necessitatibus accusantium odio molestiae placeat soluta dolores. Amet architecto maiores eum. Quae maiores quos quaerat praesentium tenetur unde, dolor, ut animi, dolore voluptatum voluptates. Dolorem, facilis quidem alias dolores vero fugit praesentium reiciendis totam neque unde voluptas cum quis odio ipsum, sapiente sunt nostrum. Impedit inventore soluta, illum eaque optio cumque assumenda quis. Soluta voluptates enim dolore quo. Deleniti sint similique officia sunt blanditiis, tempora nihil corporis veniam consectetur reiciendis exercitationem fugit omnis est dignissimos! Magnam, molestiae atque dolore fugit voluptates facere explicabo iure alias illo deserunt non sequi necessitatibus sit repellendus repellat aperiam 
+    </div>
+    <div class="content2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto sunt eveniet quisquam animi delectus cum libero veritatis blanditiis error.
+    </div>
+    <div class="content3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto sunt eveniet quisquam animi delectus cum libero veritatis blanditiis error.
+    </div>
+    <div class="content4">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto sunt eveniet quisquam animi delectus cum libero veritatis blanditiis error.
+    </div>
+    <div class="content5">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium iusto sunt eveniet quisquam animi delectus cum libero veritatis blanditiis error.
+    </div>
+</div>

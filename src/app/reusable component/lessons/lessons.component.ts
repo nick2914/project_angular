@@ -33,6 +33,6 @@ export class LessonsComponent implements OnInit {
   }
 
   goToDetail(id: number) {
-    this.router.navigate(['/detail', id]);
+    this.router.navigate(['/detail', id ]);
   }
 }

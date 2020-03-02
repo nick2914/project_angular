@@ -8,6 +8,8 @@ import { StylingComponent } from './sections/styling/styling.component';
 import { RoutingComponent } from './sections/routing/routing.component';
 import { PagenotfoundComponent } from './sections/pagenotfound/pagenotfound.component';
 import { LessonDetailComponent } from './reusable component/lesson-detail/lesson-detail.component';
+import { AdminpageComponent } from './sections/adminpage/adminpage.component';
+import { TestComponent } from './sections/test/test.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,9 @@ const routes: Routes = [
   {path: 'styling', component: StylingComponent},
   {path: 'routing', component: RoutingComponent},
   {path: 'detail/:id', component: LessonDetailComponent},
+  {path: 'admin', component: AdminpageComponent},
+  {path: '', redirectTo: 'architect', pathMatch: 'full'},
+  {path: 'test', component: TestComponent},
   {path: '**', component: PagenotfoundComponent}
 ];
 

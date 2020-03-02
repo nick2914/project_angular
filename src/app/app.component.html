@@ -4,13 +4,19 @@
             <div class="left">
                 <form class="example-form">
                     <mat-form-field class="example-full-width">
-                        <mat-label>Search</mat-label>
-                        <input matInput placeholder="Typing keywork" value="">
+                        <mat-label>Tìm kiếm</mat-label>
+                        <input matInput placeholder="Nhập từ khóa" value="">
                     </mat-form-field>
                 </form>
             </div>
             <div class="right">
-                <button mat-button>Search</button>
+                <button mat-button matBadge="4" matBadgeOverlap="true" matBadgeColor="accent">
+                    <span class="mat-button-wrapper">
+                        <mat-icon><i class="material-icons">
+                                notification_important
+                            </i></mat-icon>
+                    </span>
+                </button>
             </div>
         </div>
     </header>
@@ -49,15 +55,38 @@
             </mat-list>
         </div>
         <div class="signup">
-            <button mat-raised-button matTooltip="Đăng ký thành viên để cập nhật posts mới nhất">Đăng ký</button>
+            <button mat-raised-button>Đăng ký</button>
+            <button mat-raised-button>Đăng nhập</button>
         </div>
     </aside>
-    <main >
+    <main [class.className]="dynamicClass">
         <router-outlet #outlet="outlet"></router-outlet>
+        <mat-icon matTooltip="Mở kênh chat dành cho bài này" (click)="openChat()" [color]="color">
+            <i class="material-icons">
+                chat
+            </i>
+        </mat-icon>
+
     </main>
+    <div class="chat" *ngIf="enalbedChat">
+        <div class="content-chat">
+            <div class="setting">Setting</div>
+            <div class="list-chat">Listchat</div>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="typing.....">
+            <button mat-raised-button color="warn">
+                Send<i class="material-icons" style="margin-left: 8px">
+                    send
+                </i>
+            </button>
+        </div>
+    </div>
     <footer>
         <div class="social">Social</div>
         <div class="rule">Rule</div>
-        <div class="register">Email register</div>
+        <div class="register">
+            Email register
+        </div>
     </footer>
 </div>

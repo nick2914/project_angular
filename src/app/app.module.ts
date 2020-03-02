@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule} from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import { BindingComponent } from './sections/binding/binding.component';
 import { PagenotfoundComponent } from './sections/pagenotfound/pagenotfound.component';
 import { LessonsComponent } from './reusable component/lessons/lessons.component';
 import { LessonDetailComponent } from './reusable component/lesson-detail/lesson-detail.component';
+import { InMemoryDataService } from './service/data_services/in-memory-data.service';
+import { AdminpageComponent } from './sections/adminpage/adminpage.component';
+import { TestComponent } from './sections/test/test.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,8 @@ import { LessonDetailComponent } from './reusable component/lesson-detail/lesson
     PagenotfoundComponent,
     LessonsComponent,
     LessonDetailComponent,
+    AdminpageComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,9 @@ import { LessonDetailComponent } from './reusable component/lesson-detail/lesson
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
     FormsModule
   ],
   providers: [],

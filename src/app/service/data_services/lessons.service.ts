@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Lesson } from 'src/app/model/lesson.model';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { switchMap, filter, find } from 'rxjs/operators';
 
 
 
@@ -10,11 +11,15 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class LessonsServices {
-    lessonsUrl = 'assets/lessons.json';
+    private lessonsUrl = 'api/lessons';
     constructor(private _http: HttpClient) {}
 
     getLessons(): Observable<Lesson[]> {
         return this._http.get<Lesson[]>(this.lessonsUrl);
     }
 
+    getLesson(id: number): Observable<Lesson> {
+       return this._http.get<Lesson>(`${this.lessonsUrl}/${id}`).pipe(find(data => data.id == id));
+    }
+    
 }

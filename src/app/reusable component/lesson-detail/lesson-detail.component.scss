@@ -1,0 +1,42 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 2fr;
+}
+.image {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.content {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.content2, .content3, .content4, .content5 {
+    padding: 0 1rem 0 1rem;
+}
+
+.image img {
+    width: 100%;
+    
+}
+.content {
+    padding: 1rem 1rem 0 0;
+}
+.content h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.small_info{
+    margin-right: 1rem;
+}
+mat-divider {
+    margin-top: 2rem;
+}
+.lesson_number{
+    color: #b9b6b6;
+}
